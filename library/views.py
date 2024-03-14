@@ -19,7 +19,8 @@ def home_view(request):
 def studentclick_view(request):
     if request.user.is_authenticated:
         return HttpResponseRedirect('afterlogin')
-    return render(request,'library/studentclick.html')
+    # return render(request,'library/studentclick.html')
+    return render(request,'library/adminclick.html')
 
 #for showing signup/login button for teacher
 def adminclick_view(request):
@@ -76,7 +77,7 @@ def afterlogin_view(request):
 
 
 @login_required(login_url='adminlogin')
-@user_passes_test(is_admin)
+#@user_passes_test(is_admin)
 def addbook_view(request):
     #now it is empty book form for sending to html
     form=forms.BookForm()
@@ -89,7 +90,7 @@ def addbook_view(request):
     return render(request,'library/addbook.html',{'form':form})
 
 @login_required(login_url='adminlogin')
-@user_passes_test(is_admin)
+#@user_passes_test(is_admin)
 def viewbook_view(request):
     books=models.Book.objects.all()
     return render(request,'library/viewbook.html',{'books':books})
@@ -98,7 +99,7 @@ def viewbook_view(request):
 
 
 @login_required(login_url='adminlogin')
-@user_passes_test(is_admin)
+#@user_passes_test(is_admin)
 def issuebook_view(request):
     form=forms.IssuedBookForm()
     if request.method=='POST':
@@ -114,7 +115,7 @@ def issuebook_view(request):
 
 
 @login_required(login_url='adminlogin')
-@user_passes_test(is_admin)
+#@user_passes_test(is_admin)
 def viewissuedbook_view(request):
     issuedbooks=models.IssuedBook.objects.all()
     li=[]
@@ -142,7 +143,7 @@ def viewissuedbook_view(request):
     return render(request,'library/viewissuedbook.html',{'li':li})
 
 @login_required(login_url='adminlogin')
-@user_passes_test(is_admin)
+#@user_passes_test(is_admin)
 def viewstudent_view(request):
     students=models.StudentExtra.objects.all()
     return render(request,'library/viewstudent.html',{'students':students})
