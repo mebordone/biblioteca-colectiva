@@ -36,16 +36,21 @@
     {% include "library/navbarstudent.html" %}
     <br>
     <br>
-    <center><h3 style=" margin-bottom: 0px;"class = 'alert alert-success'>Welcome to Online library !</h3></center>
+    <center><h3 style=" margin-bottom: 0px;"class = 'alert alert-success'>Bienvenidos a la Biblioteca Colectiva !</h3></center>
     <div class="jumbotron"   style="    margin-bottom: 0px;">
-    <h1 class="display-4">Hello {{user.first_name}} !</h1>
-    <p class="lead">As you are Student, you can see how many book you have taken from library with fine and many more ...!
+    <h1 class="display-4">Hola {{user.first_name}} !</h1>
+    <p class="lead">¡Como eres Lector, puedes ver cuántos libros has sacado de la biblioteca y muchos más...!
     </p>
     <hr class="my-4">
-    <p>Option Available For You</p>
+    <p>Opciónes disponible para usted</p>
     <div class="options" style="text-align:center">
-      <a href="viewissuedbookbystudent" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">View issued book to you</a><br><br>
-        </div>
+      <a href="addbook" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Añadir libro a la biblioteca</a><br><br>
+      <a href="viewbook" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Ver libro disponible</a><br><br>
+      <a href="issuebook" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Prestar un nuevo libro</a><br><br>
+      <a href="viewissuedbook" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Ver libro prestados</a><br><br>
+      <a href="viewissuedbookbystudent" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Ver libro prestados a ti</a><br><br>
+      <a href="viewstudent" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Ver estudiante</a>
+    </div>
 
     </div>
 
