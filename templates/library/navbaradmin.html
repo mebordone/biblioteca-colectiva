@@ -31,40 +31,41 @@
 
 
 
-<div class="bs-example">
+  <div class="bs-example">
     <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
-        <a href="/" class="navbar-brand">Library Management</a>
+        <a href="/" class="navbar-brand">Biblioteca Colectiva</a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
             <div class="navbar-nav">
-                <a href="/" class="nav-item nav-link active">Home</a>
+                <a href="/" class="nav-item nav-link active">Inicio</a>
 
                 <!--for book dropdown button-->
                 <div class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Book</a>
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Libros</a>
                   <div class="dropdown-menu">
-                    <a href="addbook" class="dropdown-item">Add Book</a>
-                    <a href="viewbook" class="dropdown-item">View Book</a>
+                    <a href="addbook" class="dropdown-item">Agregar Libro</a>
+                    <a href="viewbook" class="dropdown-item">Ver Libros</a>
                   </div>
                 </div>
 
                 <!--for issuebook dropdown button-->
                 <div class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Issue Book</a>
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Prestamos</a>
                   <div class="dropdown-menu">
-                    <a href="issuebook" class="dropdown-item">Issue New Book</a>
-                    <a href="viewissuedbook" class="dropdown-item">View Issued Book</a>
+                    <a href="issuebook" class="dropdown-item">Nuevo Prestamo de Libros</a>
+                    <a href="viewissuedbook" class="dropdown-item">Ver libros prestados</a>
+                    <a href="viewissuedbookbystudent" class="dropdown-item">Ver libros prestados a ti</a>
                   </div>
                 </div>
 
                 <!--for student dropdown button-->
                 <div class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Student</a>
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Lectores</a>
                   <div class="dropdown-menu">
-                    <a href="viewstudent" class="dropdown-item">View Student</a>
+                    <a href="viewstudent" class="dropdown-item">Ver Lectores</a>
                   </div>
                 </div>
 
@@ -72,13 +73,12 @@
             </div>
 
             <div class="navbar-nav">
-                <!-- <a href="logout" class="nav-item nav-link">LOGOUT</a> &nbsp -->
-                <form method="post" action="{% url 'logout' %}">
-                  {% csrf_token %}
-                  <button type="submit">logout</button>
-                </form>
-                <a href="/aboutus" class="nav-item nav-link">About Us</a>
-                <a href="contactus" class="nav-item nav-link">Contact Us</a>
+              <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button class="btn btn-primary btn-lg" type="submit">Salir</button>
+              </form>
+                <a href="/aboutus" class="nav-item nav-link">Sobre Nosotros</a>
+                <!-- <a href="contactus" class="nav-item nav-link">Contact Us</a> -->
             </div>
 
 

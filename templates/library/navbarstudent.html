@@ -73,7 +73,10 @@
             </div>
 
             <div class="navbar-nav">
-                <a href="logout" class="nav-item nav-link">Salir</a> &nbsp
+              <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button class="btn btn-primary btn-lg" type="submit">Salir</button>
+              </form>
                 <a href="/aboutus" class="nav-item nav-link">Sobre Nosotros</a>
                 <!-- <a href="contactus" class="nav-item nav-link">Contact Us</a> -->
             </div>
