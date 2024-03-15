@@ -72,7 +72,11 @@
             </div>
 
             <div class="navbar-nav">
-                <a href="logout" class="nav-item nav-link">LOGOUT</a> &nbsp
+                <!-- <a href="logout" class="nav-item nav-link">LOGOUT</a> &nbsp -->
+                <form method="post" action="{% url 'logout' %}">
+                  {% csrf_token %}
+                  <button type="submit">logout</button>
+                </form>
                 <a href="/aboutus" class="nav-item nav-link">About Us</a>
                 <a href="contactus" class="nav-item nav-link">Contact Us</a>
             </div>
