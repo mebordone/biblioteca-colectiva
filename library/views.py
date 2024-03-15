@@ -19,8 +19,8 @@ def home_view(request):
 def studentclick_view(request):
     if request.user.is_authenticated:
         return HttpResponseRedirect('afterlogin')
-    # return render(request,'library/studentclick.html')
-    return render(request,'library/adminclick.html')
+    return render(request,'library/studentclick.html')
+    # return render(request,'library/adminclick.html')
 
 #for showing signup/login button for teacher
 def adminclick_view(request):
