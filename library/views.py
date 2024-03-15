@@ -28,14 +28,6 @@ def adminclick_view(request):
         return HttpResponseRedirect('afterlogin')
     return render(request,'library/adminclick.html')
 
-
-
-
-
-
-
-
-
 def studentsignup_view(request):
     form1=forms.StudentUserForm()
     form2=forms.StudentExtraForm()
