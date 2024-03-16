@@ -58,15 +58,16 @@ border-radius: 5px;
     {% include "library/navbaradmin.html" %}
     <br>
     <br>
-    <h3 class="p-3 mb-2 bg-primary text-white" style = 'font-size: 50px;text-align:center;'>Available Book in Library !</h3>
+    <h3 class="p-3 mb-2 bg-primary text-white" style = 'font-size: 50px;text-align:center;'>Lebros de la biblioteca colectiva !</h3>
 {% if books%}
 <table class="redTable">
 <thead>
 <tr>
-<th>Book Name</th>
+<th>Título</th>
 <th>ISBN</th>
-<th>Author</th>
-<th>Category</th>
+<th>Autor</th>
+<th>Categoria</th>
+<th>Biblioteca</th>
 </tr>
 </thead>
 <tfoot>
@@ -83,6 +84,7 @@ border-radius: 5px;
       <td>{{book.isbn}}</td>
       <td>{{book.author}}</td>
       <td>{{book.category}}</td>
+      <td>{{book.owner}}</td>
     </tr>
   {% endfor %}
 </tbody>
