@@ -32,7 +32,7 @@ class Book(models.Model):
     isbn=models.PositiveIntegerField()
     author=models.CharField(max_length=40)
     category=models.CharField(max_length=30,choices=catchoice,default='education')
-    owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, default=1)
+ #   owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, default=1)
     def __str__(self):
         return str(self.name)+"["+str(self.isbn)+']'
 
